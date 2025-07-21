@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Configure CMake
-        run: jwlawson/actions-setup-cmake@v1
+        run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
 
       - name: Install dependencies
         run: |
